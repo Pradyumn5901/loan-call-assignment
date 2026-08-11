@@ -2,6 +2,12 @@
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# Ensure app directory is in sys.path for Streamlit Cloud
+sys.path.insert(0, str(Path(__file__).parent.resolve()))
+
 from dotenv import load_dotenv
 
 load_dotenv()  # must run before any module reads os.environ

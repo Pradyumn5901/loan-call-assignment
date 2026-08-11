@@ -51,7 +51,7 @@ def _get_default_model_path() -> str:
         return str(models_dir / "qwen2.5-1.5b-instruct-q4_k_m.gguf")
 
 
-DEFAULT_MODEL_PATH: str = _get_default_model_path()
+DEFAULT_MODEL_PATH: str = os.environ.get("LLM_MODEL_PATH", "")
 
 DEFAULT_N_CTX: int = int(os.environ.get("LLM_N_CTX", "2048"))
 DEFAULT_MAX_TOKENS: int = int(os.environ.get("LLM_MAX_TOKENS", "512"))
@@ -109,7 +109,7 @@ def get_llm(
             ) from exc
         raise RuntimeError("llama-cpp-python is not installed.\nRun: uv add llama-cpp-python") from exc
 
-    path = str(model_path or DEFAULT_MODEL_PATH)
+    path = str(model_path or os.environ.get("LLM_MODEL_PATH") or _get_default_model_path())
 
     if not Path(path).exists():
         raise FileNotFoundError(
