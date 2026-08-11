@@ -3,18 +3,39 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-_ML_MODEL_DIR: str = os.environ.get("ML_MODEL_DIR", "models")
-
 
 def model_path(task: str) -> str:
     name = "profanity" if task == "profanity" else "compliance_events"
-    return os.path.join(_ML_MODEL_DIR, f"{name}.joblib")
+    filename = f"{name}.joblib"
+
+    streamlit_dir = Path(__file__).parent.resolve()
+    module_models_dir = streamlit_dir / "models"
+
+    candidates: list[Path] = []
+
+    env_dir = os.environ.get("ML_MODEL_DIR")
+    if env_dir:
+        candidates.append(Path(env_dir))
+        candidates.append(streamlit_dir / env_dir)
+        candidates.append(Path.cwd() / env_dir)
+
+    candidates.append(module_models_dir)
+    candidates.append(Path.cwd() / "streamlit" / "models")
+    candidates.append(Path.cwd() / "models")
+
+    for candidate in candidates:
+        filepath = candidate / filename
+        if filepath.is_file():
+            return str(filepath.resolve())
+
+    return str((module_models_dir / filename).resolve())
 
 
 def format_evidence(evidence: list[Any]) -> str:

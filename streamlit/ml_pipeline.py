@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import warnings
 from pathlib import Path
 from typing import Any
 
@@ -9,7 +10,9 @@ import joblib
 
 
 def load_artifact(path: str | Path) -> dict[str, Any]:
-    return joblib.load(path)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        return joblib.load(path)
 
 
 def predict_texts(texts: list[str], artifact: dict[str, Any]) -> list[dict[str, Any]]:
