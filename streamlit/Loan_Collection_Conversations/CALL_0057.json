@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Ms. Priya?",
+    "stime": 1.3,
+    "etime": 3.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, speaking.",
+    "stime": 4.5,
+    "etime": 7.0
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from EasyLoan Finance. To discuss your account, I need to verify your identity.",
+    "stime": 8.0,
+    "etime": 10.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Please confirm the last four digits of your Aadhaar card.",
+    "stime": 11.9,
+    "etime": 15.5
+  },
+  {
+    "speaker": "Customer",
+    "text": "It is 4452.",
+    "stime": 16.5,
+    "etime": 20.3
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. Your current outstanding on the Home Loan is 50398 rupees.",
+    "stime": 20.9,
+    "etime": 25.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "Understood. I will make the payment by Friday.",
+    "stime": 27.2,
+    "etime": 31.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. I have noted your commitment.",
+    "stime": 32.1,
+    "etime": 35.6
+  }
+]

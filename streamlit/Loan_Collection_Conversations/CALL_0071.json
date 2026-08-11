@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Ms. Pooja?",
+    "stime": 1.2,
+    "etime": 3.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, who is this?",
+    "stime": 5.1,
+    "etime": 9.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from FinTrust regarding your Home Loan account.",
+    "stime": 11.1,
+    "etime": 15.0
+  },
+  {
+    "speaker": "Agent",
+    "text": "For security, could you please confirm your date of birth?",
+    "stime": 16.1,
+    "etime": 20.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "It's 15th August 1988.",
+    "stime": 22.1,
+    "etime": 24.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. I see a pending EMI of 40520 rupees.",
+    "stime": 26.2,
+    "etime": 31.1
+  },
+  {
+    "speaker": "Customer",
+    "text": "Oh, I forgot. I will pay it by tomorrow morning.",
+    "stime": 32.2,
+    "etime": 36.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Great. I will mark that as a promise to pay. Have a good day.",
+    "stime": 36.9,
+    "etime": 40.4
+  }
+]

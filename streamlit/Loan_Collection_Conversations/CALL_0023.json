@@ -1,0 +1,38 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, is the owner of the house there?",
+    "stime": 0.6,
+    "etime": 3.7
+  },
+  {
+    "speaker": "Customer",
+    "text": "Depends. If you're a salesman, no. If you're family, maybe.",
+    "stime": 4.8,
+    "etime": 8.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "This is regarding a very important financial matter.",
+    "stime": 10.2,
+    "etime": 14.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "Oh, you mean that 'thing' from last month? The paperwork is a mess.",
+    "stime": 15.6,
+    "etime": 19.6
+  },
+  {
+    "speaker": "Agent",
+    "text": "The outstanding amount is roughly 67855 rupees. Do you recognize that?",
+    "stime": 21.1,
+    "etime": 25.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "Maybe you should go fly a kite and let me handle it later.",
+    "stime": 26.6,
+    "etime": 30.3
+  }
+]

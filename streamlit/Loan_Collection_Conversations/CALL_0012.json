@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Good afternoon, is this Ms. Priya?",
+    "stime": 0.9,
+    "etime": 3.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, speaking.",
+    "stime": 4.4,
+    "etime": 7.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "This is Capital Recoveries. I am calling about your Credit Card.",
+    "stime": 8.2,
+    "etime": 10.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "Before we proceed, please confirm the last four digits of your account number.",
+    "stime": 11.8,
+    "etime": 15.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "3821.",
+    "stime": 16.6,
+    "etime": 20.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Verified. Your outstanding EMI is 32103 rupees and is currently overdue.",
+    "stime": 21.4,
+    "etime": 25.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "I can clear it this weekend. Please note that.",
+    "stime": 26.3,
+    "etime": 30.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "Noted as a promise to pay by Sunday. Thank you for your time.",
+    "stime": 31.3,
+    "etime": 35.2
+  }
+]

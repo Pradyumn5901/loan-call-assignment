@@ -1,0 +1,56 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Good morning, is this Mr. Vikram?",
+    "stime": 1.4,
+    "etime": 4.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes.",
+    "stime": 5.7,
+    "etime": 8.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "This is EasyLoan Finance. Before discussing your Credit Card, please confirm your date of birth.",
+    "stime": 9.9,
+    "etime": 14.3
+  },
+  {
+    "speaker": "Customer",
+    "text": "9th November 1987.",
+    "stime": 15.3,
+    "etime": 17.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "And the last four digits of your account number?",
+    "stime": 18.9,
+    "etime": 21.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "1560.",
+    "stime": 22.7,
+    "etime": 24.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Identity verified. Your unpaid EMI is 72921 rupees.",
+    "stime": 25.6,
+    "etime": 29.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "I will clear it within three days.",
+    "stime": 30.8,
+    "etime": 33.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. Have a good day.",
+    "stime": 34.8,
+    "etime": 38.7
+  }
+]

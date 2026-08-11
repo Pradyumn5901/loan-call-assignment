@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Good afternoon, is this Ms. Sneha?",
+    "stime": 1.2,
+    "etime": 5.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, speaking.",
+    "stime": 6.1,
+    "etime": 8.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "This is FinTrust. I am calling about your Personal Loan.",
+    "stime": 9.0,
+    "etime": 11.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Before we proceed, please confirm the last four digits of your account number.",
+    "stime": 12.5,
+    "etime": 15.5
+  },
+  {
+    "speaker": "Customer",
+    "text": "3821.",
+    "stime": 16.0,
+    "etime": 19.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Verified. Your outstanding EMI is 10244 rupees and is currently overdue.",
+    "stime": 20.5,
+    "etime": 23.3
+  },
+  {
+    "speaker": "Customer",
+    "text": "I can clear it this weekend. Please note that.",
+    "stime": 24.1,
+    "etime": 28.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Noted as a promise to pay by Sunday. Thank you for your time.",
+    "stime": 29.5,
+    "etime": 32.8
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Ms. Meera?",
+    "stime": 1.3,
+    "etime": 3.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, who is this?",
+    "stime": 4.5,
+    "etime": 7.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from Prime Capital regarding your Vehicle Loan account.",
+    "stime": 8.1,
+    "etime": 12.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "For security, could you please confirm your date of birth?",
+    "stime": 13.5,
+    "etime": 16.7
+  },
+  {
+    "speaker": "Customer",
+    "text": "It's 15th August 1988.",
+    "stime": 17.4,
+    "etime": 21.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. I see a pending EMI of 71151 rupees.",
+    "stime": 22.4,
+    "etime": 25.0
+  },
+  {
+    "speaker": "Customer",
+    "text": "Oh, I forgot. I will pay it by tomorrow morning.",
+    "stime": 26.0,
+    "etime": 29.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Great. I will mark that as a promise to pay. Have a good day.",
+    "stime": 30.8,
+    "etime": 35.4
+  }
+]

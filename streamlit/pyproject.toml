@@ -1,0 +1,18 @@
+[project]
+name = "fatakpay-assignment"
+version = "0.1.0"
+description = "Loan Collection Conversation Analysis using ML & LLM"
+readme = "README.md"
+requires-python = ">=3.12, <3.13"
+dependencies = [
+    "huggingface-hub>=1.27.0",
+    "joblib>=1.3.0",
+    "llama-cpp-python",
+    "pandas>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "scikit-learn>=1.3.0",
+    "streamlit>=1.30.0",
+]
+
+[tool.uv.sources]
+llama-cpp-python = { url = "https://github.com/abetlen/llama-cpp-python/releases/download/v0.3.2/llama_cpp_python-0.3.2-cp312-cp312-win_amd64.whl" }

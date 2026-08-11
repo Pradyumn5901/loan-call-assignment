@@ -1,0 +1,38 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hi, looking for Amit.",
+    "stime": 1.2,
+    "etime": 4.1
+  },
+  {
+    "speaker": "Customer",
+    "text": "You found someone. What's this about?",
+    "stime": 5.5,
+    "etime": 7.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your Vehicle Loan account with us shows dues of 54885 rupees.",
+    "stime": 9.1,
+    "etime": 13.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "Interesting. You didn't ask who I am or for any ID.",
+    "stime": 14.2,
+    "etime": 17.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Axis Collections. Can you arrange payment soon?",
+    "stime": 18.4,
+    "etime": 23.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "I'll think about it. Goodbye.",
+    "stime": 24.2,
+    "etime": 27.9
+  }
+]

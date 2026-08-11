@@ -1,0 +1,56 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Good morning, am I speaking with Ms. Priya?",
+    "stime": 1.3,
+    "etime": 6.3
+  },
+  {
+    "speaker": "Customer",
+    "text": "Speaking.",
+    "stime": 7.4,
+    "etime": 9.6
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Capital Recoveries. Please confirm your date of birth.",
+    "stime": 10.2,
+    "etime": 14.3
+  },
+  {
+    "speaker": "Customer",
+    "text": "5th July 1985.",
+    "stime": 15.3,
+    "etime": 17.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your Home Loan payment of 14631 rupees is pending.",
+    "stime": 18.4,
+    "etime": 21.5
+  },
+  {
+    "speaker": "Customer",
+    "text": "I lost my job. I need some time.",
+    "stime": 22.5,
+    "etime": 27.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "I don't give a damn about your excuses. Pay the freaking money.",
+    "stime": 28.2,
+    "etime": 33.0
+  },
+  {
+    "speaker": "Customer",
+    "text": "This is harassment.",
+    "stime": 34.3,
+    "etime": 37.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Call it whatever the hell you want. Just shut up and pay.",
+    "stime": 39.3,
+    "etime": 43.4
+  }
+]

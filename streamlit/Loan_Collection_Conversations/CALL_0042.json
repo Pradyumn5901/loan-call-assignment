@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello Mr. Suresh, am I speaking with you?",
+    "stime": 1.5,
+    "etime": 3.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes.",
+    "stime": 4.7,
+    "etime": 8.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Axis Collections. To discuss your Personal Loan, I need to verify your identity.",
+    "stime": 9.6,
+    "etime": 14.0
+  },
+  {
+    "speaker": "Agent",
+    "text": "Can you confirm your registered address city?",
+    "stime": 15.4,
+    "etime": 19.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "Pune.",
+    "stime": 20.6,
+    "etime": 24.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. There is an unpaid amount of 11180 rupees on your account.",
+    "stime": 24.8,
+    "etime": 28.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "I will transfer it today evening.",
+    "stime": 29.6,
+    "etime": 34.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Perfect. I will update the system accordingly. Have a nice day.",
+    "stime": 35.3,
+    "etime": 39.8
+  }
+]

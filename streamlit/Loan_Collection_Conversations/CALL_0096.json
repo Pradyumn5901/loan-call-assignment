@@ -1,0 +1,38 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, is the person who took the loan available?",
+    "stime": 1.4,
+    "etime": 5.7
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, go ahead.",
+    "stime": 6.5,
+    "etime": 11.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your Credit Card EMI of 75603 rupees has failed and the account is in default.",
+    "stime": 12.4,
+    "etime": 15.5
+  },
+  {
+    "speaker": "Customer",
+    "text": "Hold on. You didn't ask for my DOB or account number.",
+    "stime": 16.5,
+    "etime": 19.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from FinTrust. We need the payment today.",
+    "stime": 21.4,
+    "etime": 26.1
+  },
+  {
+    "speaker": "Customer",
+    "text": "I refuse to continue until you verify my identity properly.",
+    "stime": 26.8,
+    "etime": 31.4
+  }
+]

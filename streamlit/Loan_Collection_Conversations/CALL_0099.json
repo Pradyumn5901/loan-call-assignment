@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Good evening, am I speaking with Ms. Neha?",
+    "stime": 0.6,
+    "etime": 3.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "Who is this?",
+    "stime": 4.7,
+    "etime": 8.2
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Capital Recoveries about your Vehicle Loan. Please confirm your customer ID.",
+    "stime": 8.8,
+    "etime": 12.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "CID77821, yes.",
+    "stime": 13.3,
+    "etime": 15.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your outstanding balance is 29009 rupees.",
+    "stime": 17.2,
+    "etime": 21.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "This is bullshit. I already paid last month, you damn fools.",
+    "stime": 22.7,
+    "etime": 26.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "I do not see a payment in the system. Can we schedule one?",
+    "stime": 27.5,
+    "etime": 29.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "Schedule my ass. Don't call me again, you piece of shit.",
+    "stime": 30.6,
+    "etime": 34.4
+  }
+]

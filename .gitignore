@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Large Language Model Binaries (auto-downloaded via Hugging Face Hub)
+*.gguf
+models/*.gguf
+

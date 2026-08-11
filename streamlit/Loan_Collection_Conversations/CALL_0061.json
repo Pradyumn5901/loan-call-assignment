@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Ms. Priya?",
+    "stime": 1.0,
+    "etime": 4.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, speaking.",
+    "stime": 5.5,
+    "etime": 9.6
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from Capital Recoveries. To discuss your account, I need to verify your identity.",
+    "stime": 10.8,
+    "etime": 15.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "Please confirm the last four digits of your Aadhaar card.",
+    "stime": 16.5,
+    "etime": 19.7
+  },
+  {
+    "speaker": "Customer",
+    "text": "It is 4452.",
+    "stime": 20.8,
+    "etime": 25.0
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. Your current outstanding on the Personal Loan is 83580 rupees.",
+    "stime": 26.3,
+    "etime": 31.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "Understood. I will make the payment by Friday.",
+    "stime": 32.1,
+    "etime": 37.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. I have noted your commitment.",
+    "stime": 38.3,
+    "etime": 43.2
+  }
+]

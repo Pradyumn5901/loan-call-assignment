@@ -1,0 +1,38 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hi, looking for Karan.",
+    "stime": 1.5,
+    "etime": 5.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "You found someone. What's this about?",
+    "stime": 6.5,
+    "etime": 10.2
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your Vehicle Loan account with us shows dues of 5341 rupees.",
+    "stime": 11.5,
+    "etime": 13.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "Interesting. You didn't ask who I am or for any ID.",
+    "stime": 14.2,
+    "etime": 18.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Prime Capital. Can you arrange payment soon?",
+    "stime": 19.9,
+    "etime": 22.3
+  },
+  {
+    "speaker": "Customer",
+    "text": "I'll think about it. Goodbye.",
+    "stime": 23.1,
+    "etime": 25.9
+  }
+]

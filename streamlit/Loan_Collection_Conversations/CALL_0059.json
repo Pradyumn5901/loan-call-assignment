@@ -1,0 +1,44 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, is this Suresh?",
+    "stime": 1.1,
+    "etime": 6.1
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes.",
+    "stime": 6.7,
+    "etime": 10.6
+  },
+  {
+    "speaker": "Agent",
+    "text": "I'm calling about your Credit Card where you owe us 19072 rupees.",
+    "stime": 11.7,
+    "etime": 14.0
+  },
+  {
+    "speaker": "Customer",
+    "text": "Wait, who is this? Why are you telling me this without checking who I am?",
+    "stime": 15.5,
+    "etime": 19.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Capital Recoveries. Your EMI is bounced.",
+    "stime": 20.4,
+    "etime": 25.0
+  },
+  {
+    "speaker": "Customer",
+    "text": "This is not okay. Anyone could have answered this phone.",
+    "stime": 26.3,
+    "etime": 30.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "Please arrange the payment as soon as possible.",
+    "stime": 32.0,
+    "etime": 34.9
+  }
+]

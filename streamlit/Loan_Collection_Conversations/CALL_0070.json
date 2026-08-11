@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Mr. Karan?",
+    "stime": 1.4,
+    "etime": 4.0
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, who is this?",
+    "stime": 4.6,
+    "etime": 8.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from Capital Recoveries regarding your Vehicle Loan account.",
+    "stime": 9.4,
+    "etime": 12.6
+  },
+  {
+    "speaker": "Agent",
+    "text": "For security, could you please confirm your date of birth?",
+    "stime": 13.5,
+    "etime": 15.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "It's 15th August 1988.",
+    "stime": 16.5,
+    "etime": 21.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. I see a pending EMI of 66983 rupees.",
+    "stime": 22.5,
+    "etime": 25.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "Oh, I forgot. I will pay it by tomorrow morning.",
+    "stime": 26.4,
+    "etime": 28.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "Great. I will mark that as a promise to pay. Have a good day.",
+    "stime": 29.9,
+    "etime": 32.1
+  }
+]

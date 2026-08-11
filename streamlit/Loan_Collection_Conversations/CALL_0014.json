@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Mr. Amit?",
+    "stime": 1.0,
+    "etime": 5.7
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, speaking.",
+    "stime": 7.0,
+    "etime": 10.3
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from Axis Collections. To discuss your account, I need to verify your identity.",
+    "stime": 11.2,
+    "etime": 13.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Please confirm the last four digits of your Aadhaar card.",
+    "stime": 14.2,
+    "etime": 16.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "It is 4452.",
+    "stime": 17.1,
+    "etime": 21.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. Your current outstanding on the Personal Loan is 5748 rupees.",
+    "stime": 22.8,
+    "etime": 27.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "Understood. I will make the payment by Friday.",
+    "stime": 28.3,
+    "etime": 31.7
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. I have noted your commitment.",
+    "stime": 32.6,
+    "etime": 35.0
+  }
+]

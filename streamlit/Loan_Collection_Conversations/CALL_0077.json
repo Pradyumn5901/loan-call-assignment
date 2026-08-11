@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello Ms. Pooja, am I speaking with you?",
+    "stime": 0.7,
+    "etime": 3.1
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes.",
+    "stime": 3.6,
+    "etime": 8.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Prime Capital. To discuss your Personal Loan, I need to verify your identity.",
+    "stime": 9.1,
+    "etime": 13.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Can you confirm your registered address city?",
+    "stime": 14.3,
+    "etime": 18.8
+  },
+  {
+    "speaker": "Customer",
+    "text": "Pune.",
+    "stime": 20.0,
+    "etime": 23.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. There is an unpaid amount of 81390 rupees on your account.",
+    "stime": 24.1,
+    "etime": 27.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "I will transfer it today evening.",
+    "stime": 28.8,
+    "etime": 31.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Perfect. I will update the system accordingly. Have a nice day.",
+    "stime": 32.9,
+    "etime": 36.7
+  }
+]

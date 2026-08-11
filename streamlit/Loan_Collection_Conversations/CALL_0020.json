@@ -1,0 +1,62 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Ms. Priya?",
+    "stime": 1.0,
+    "etime": 4.3
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, who is this?",
+    "stime": 5.6,
+    "etime": 9.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from EasyLoan Finance regarding your Business Loan account.",
+    "stime": 10.9,
+    "etime": 14.6
+  },
+  {
+    "speaker": "Agent",
+    "text": "Please confirm your date of birth for verification.",
+    "stime": 15.2,
+    "etime": 17.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "12th March 1990.",
+    "stime": 18.7,
+    "etime": 20.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your EMI of 80279 rupees is overdue. When will you pay?",
+    "stime": 22.3,
+    "etime": 25.4
+  },
+  {
+    "speaker": "Customer",
+    "text": "I can't pay right now, stop calling me.",
+    "stime": 26.1,
+    "etime": 28.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "Stop wasting my damn time with these excuses. Just pay up.",
+    "stime": 29.9,
+    "etime": 33.0
+  },
+  {
+    "speaker": "Customer",
+    "text": "Don't speak to me like that.",
+    "stime": 34.4,
+    "etime": 38.1
+  },
+  {
+    "speaker": "Agent",
+    "text": "Don't act like a bloody idiot then. You took the loan, you pay the damn money.",
+    "stime": 39.5,
+    "etime": 43.3
+  }
+]

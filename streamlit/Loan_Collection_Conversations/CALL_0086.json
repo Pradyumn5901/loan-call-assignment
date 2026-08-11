@@ -1,0 +1,62 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, am I speaking with Ms. Meera?",
+    "stime": 0.6,
+    "etime": 4.5
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, who is this?",
+    "stime": 5.6,
+    "etime": 8.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am calling from Axis Collections regarding your Business Loan account.",
+    "stime": 9.9,
+    "etime": 13.0
+  },
+  {
+    "speaker": "Agent",
+    "text": "Please confirm your date of birth for verification.",
+    "stime": 13.7,
+    "etime": 16.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "12th March 1990.",
+    "stime": 17.9,
+    "etime": 21.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Your EMI of 86808 rupees is overdue. When will you pay?",
+    "stime": 23.0,
+    "etime": 25.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "I can't pay right now, stop calling me.",
+    "stime": 26.2,
+    "etime": 30.9
+  },
+  {
+    "speaker": "Agent",
+    "text": "Stop wasting my damn time with these excuses. Just pay up.",
+    "stime": 31.7,
+    "etime": 36.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "Don't speak to me like that.",
+    "stime": 36.8,
+    "etime": 38.8
+  },
+  {
+    "speaker": "Agent",
+    "text": "Don't act like a bloody idiot then. You took the loan, you pay the damn money.",
+    "stime": 39.4,
+    "etime": 44.3
+  }
+]

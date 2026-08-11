@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello Mr. Amit, am I speaking with you?",
+    "stime": 1.1,
+    "etime": 5.6
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes.",
+    "stime": 6.4,
+    "etime": 10.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "I am from Capital Recoveries. To discuss your Personal Loan, I need to verify your identity.",
+    "stime": 11.6,
+    "etime": 14.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Can you confirm your registered address city?",
+    "stime": 15.5,
+    "etime": 17.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "Pune.",
+    "stime": 19.0,
+    "etime": 23.0
+  },
+  {
+    "speaker": "Agent",
+    "text": "Thank you. There is an unpaid amount of 35186 rupees on your account.",
+    "stime": 24.1,
+    "etime": 26.9
+  },
+  {
+    "speaker": "Customer",
+    "text": "I will transfer it today evening.",
+    "stime": 27.7,
+    "etime": 32.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Perfect. I will update the system accordingly. Have a nice day.",
+    "stime": 33.3,
+    "etime": 36.8
+  }
+]

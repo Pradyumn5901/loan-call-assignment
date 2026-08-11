@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Good afternoon, is this Ms. Pooja?",
+    "stime": 0.6,
+    "etime": 5.5
+  },
+  {
+    "speaker": "Customer",
+    "text": "Yes, speaking.",
+    "stime": 6.0,
+    "etime": 9.3
+  },
+  {
+    "speaker": "Agent",
+    "text": "This is Axis Collections. I am calling about your Vehicle Loan.",
+    "stime": 9.9,
+    "etime": 12.4
+  },
+  {
+    "speaker": "Agent",
+    "text": "Before we proceed, please confirm the last four digits of your account number.",
+    "stime": 13.4,
+    "etime": 17.2
+  },
+  {
+    "speaker": "Customer",
+    "text": "3821.",
+    "stime": 18.4,
+    "etime": 23.2
+  },
+  {
+    "speaker": "Agent",
+    "text": "Verified. Your outstanding EMI is 53081 rupees and is currently overdue.",
+    "stime": 23.7,
+    "etime": 28.1
+  },
+  {
+    "speaker": "Customer",
+    "text": "I can clear it this weekend. Please note that.",
+    "stime": 29.2,
+    "etime": 31.5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Noted as a promise to pay by Sunday. Thank you for your time.",
+    "stime": 32.4,
+    "etime": 35.6
+  }
+]
