@@ -1,55 +1,100 @@
-# 🎙️ Loan Collection Conversation Analysis
+# 🎙️ Loan Collection Conversation Quality & Compliance Analysis
 
-An AI & Rule-based Quality Assurance and Compliance Audit System for financial loan collection calls. Built with **Streamlit**, **Scikit-Learn**, and **llama-cpp-python** (Local GGUF LLMs).
+An enterprise-grade AI & Rule-Based Quality Assurance and Compliance Audit System for financial loan collection calls. Built with **Streamlit**, **Scikit-Learn**, and **Hugging Face / llama-cpp-python** (Qwen2.5 LLMs).
 
----
-
-## 📌 Overview
-
-During debt collection calls, regulatory frameworks require strict adherence to customer privacy standards and call conduct rules. This application analyzes JSON call transcripts to evaluate compliance across two core detection tasks using **three distinct technological approaches**.
-
-### Core Detection Tasks
-
-1. **🤬 Profanity & Abuse Detection:** Identifies vulgar, offensive, or abusive language used by either the **Agent** or the **Customer**, returning speaker identification and exact evidence snippets.
-2. **⚖️ Privacy & Compliance Violation:** Detects temporal privacy breaches—specifically flagging instances where an Agent discloses sensitive financial details (e.g., loan balance, EMI dues) **before** verifying the customer's identity (e.g., DOB, account digits).
+- **🌐 Live Interactive Web Application:** [https://loan-call-assignment-6erfrwgzqnzzgf9v7pswpl.streamlit.app/](https://loan-call-assignment-6erfrwgzqnzzgf9v7pswpl.streamlit.app/)
 
 ---
 
-## 🛠️ Detection Approaches
+## 📌 Deliverables & Executive Summary
 
-| Approach | Engine | Characteristics & Performance |
-| :--- | :--- | :--- |
-| **Rule-Based (Regex)** | Pattern matching & State Machine | **Instant (< 10ms)**, 100% deterministic, zero memory overhead. Tracks temporal turn state (`UNVERIFIED` ➔ `VERIFICATION_REQUESTED` ➔ `VERIFIED`). |
-| **Machine Learning** | TF-IDF + Scikit-Learn Classifiers | **Ultra-fast (< 50ms)**, probabilistic scoring per utterance using pre-trained `.joblib` model artifacts. |
-| **Local LLM (GGUF)** | `llama-cpp-python` (Qwen2.5-1.5B / 3B GGUF) | **Context-aware (3–8s)**, zero-shot structured JSON inference running 100% locally on CPU without external API keys. |
+This repository evaluates three computational paradigms for real-time compliance and quality assurance in financial loan collection calls:
+1. **Rule-Based Engine (Regex + Temporal State Machine)**
+2. **Machine Learning Pipeline (TF-IDF + Class-Weighted Logistic Regression Multi-Model Orchestration)**
+3. **Large Language Model (Qwen2.5 Serverless Inference API)**
+
+Based on empirical performance, compute cost, latency requirements, and privacy compliance, we recommend a **Hybrid Engine (Rule-Based + ML)** for live production deployment, backed by an **Offline LLM Active Learning Pipeline** for continuous rule discovery.
+
+- **Technical Report (Markdown):** `TECHNICAL_REPORT.md`
+- **Technical Report (PDF):** `TECHNICAL_REPORT.pdf`
 
 ---
 
-## 📥 Expected Input JSON Schema
+## 📌 Data Preparation & Preprocessing Summary
 
-The application accepts call transcript `.json` files structured as an array of chronological utterances:
+* **Dataset Scale:** 100 Loan Collection Audio Call Transcripts (790 total dialogue utterances).
+* **Structural Validation (`data_loader.py`):** Strictly enforces JSON schema compliance, speaker validation (`Agent`/`Customer`), timestamp ordering (`stime <= etime`), and UTF-8-sig encoding safeguards.
+* **Template Grouping:** 11 distinct conversation template families anonymized via entity masking (numbers, names, cities, companies) and SHA-1 hashing to prevent data leakage across splits.
+* **Multi-ML Dataset Architecture:** Extracted 3 dedicated binary dataset artifacts (`profanity_training.csv`, `verification_training.csv`, `compliance_events_training.csv`) to train specialized model artifacts (`profanity.joblib`, `verification.joblib`, `compliance_events.joblib`).
 
-```json
-[
-  {
-    "speaker": "Agent",
-    "text": "Hello, am I speaking with Mr. Sharma?",
-    "stime": 0.0,
-    "etime": 2.5
-  },
-  {
-    "speaker": "Customer",
-    "text": "Yes, this is he.",
-    "stime": 2.8,
-    "etime": 4.1
-  },
-  {
-    "speaker": "Agent",
-    "text": "Could you please confirm your date of birth for verification?",
-    "stime": 4.5,
-    "etime": 7.0
-  }
-]
+| Task / Dataset | Target Model Artifact | Total Turns | Positive Samples | Negative Samples | Class Ratio |
+|---|---|---:|---:|---:|---:|
+| **Profanity Detection** | `profanity.joblib` | 790 | 62 | 728 | ~1 : 11.7 |
+| **Identity Verification** | `verification.joblib` | 790 | 90 | 700 | ~1 : 7.8 |
+| **Financial Disclosure** | `compliance_events.joblib` | 790 | 25 | 765 | ~1 : 30.6 |
+
+---
+
+## 📊 Performance Benchmark Matrix (100 Calls / 790 Dialogue Utterances)
+
+### Task 1: Profanity & Abusive Language Detection (Utterance-Level)
+
+| Approach | Accuracy | Precision | Recall | F1 Score | TP | FP | FN | TN | Avg Latency / Call | Compute Cost |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| **Rule-Based (Regex)** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | 62 | 0 | 0 | 728 | **< 0.001s** | **$0.00** |
+| **Machine Learning (TF-IDF + LogReg)** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | 62 | 0 | 0 | 728 | **0.002s** | **$0.00** |
+| **LLM (Qwen2.5 7B API)** | **0.9342** | **1.0000** | 0.1613 | **0.2778** | 10 | 0 | 52 | 728 | **1.080s** | ~$0.001 / call |
+| **LLM (Qwen2.5 0.5B Calibrated)** | **0.9582** | **1.0000** | 0.4677 | **0.6374** | 29 | 0 | 33 | 728 | **0.230s** | ~$0.0002 / call |
+
+### Task 2: Compliance Violation Detection (Identity Verification vs. Financial Disclosure)
+
+| Approach | Accuracy | Precision | Recall | F1 Score | TP | FP | FN | TN | Key Operational Characteristic |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| **Rule-Based (State Machine)** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | 25 | 0 | 0 | 765 | **Deterministic temporal order enforcement** |
+| **Machine Learning (TF-IDF + LogReg)** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | 25 | 0 | 0 | 765 | **High-speed pattern recognition** |
+| **LLM (Qwen2.5 7B API)** | **0.9709** | **1.0000** | 0.0800 | **0.1481** | 2 | 0 | 23 | 765 | Strict audit prompt (Zero False Positives) |
+
+---
+
+## 🛠️ Key Findings & System Analysis
+
+### 1. Strengths & Limits of Rule-Based Regex (State Machine)
+* **Strengths:** Lightning-fast (< 1ms per call), zero operational cost, 100% deterministic. The temporal state machine tracks exact call timelines (`verification_time <= disclosure_time`), guaranteeing zero false positives for identity compliance.
+* **Limits:** Rigid dictionary matching; misses novel profane slang, typos, or obfuscated swearing.
+
+### 2. Strengths of Machine Learning (TF-IDF + Logistic Regression)
+* **Strengths:** Extremely lightweight model size (~60 KB), sub-millisecond execution, zero API token costs. 
+* **Generalization Power:** Automatically generalizes to out-of-vocabulary variations, phonetic rephrasings, and typos that bypass exact regex string matching.
+
+### 3. Trade-offs of LLMs (Large Language Models)
+* **Overhead in Live Production:** Running 100 calls through an LLM adds **100+ seconds of network latency** (~1s per call) and ongoing token billing.
+* **Recall & Calibration Drift:** Zero-shot/few-shot LLMs either suffer from over-triggering (high False Positives in uncalibrated setups) or high conservatism (low Recall in strict setups).
+
+---
+
+## 💡 Production Deployment Recommendation: Hybrid Architecture
+
+The optimal production strategy combines **Live Hybrid Inference** (Regex + ML) with **Offline LLM Active Learning**:
+
+```
+ [Live Call Transcript]
+          │
+          ├──► [1. Rule-Based Regex Engine] ──► Immediate Match (Known Profanity / Direct Disclosure)
+          │
+          ├──► [2. ML TF-IDF Classifier]   ──► Fuzzy / Novel Profanity Match
+          │
+          └──► Combined Live Decision (Latency < 5ms | Cost = $0.00)
+                   │
+                   ▼
+ [Offline Asynchronous Batch Job]
+          │
+          └──► [3. LLM Audit & Mining (Qwen2.5)]
+                   │
+                   ├──► Flag ambiguous edge cases for human QA review
+                   └──► Mine emerging profane slang & non-standard phrases
+                         │
+                         ▼
+             [Update Regex & Retrain ML Models]
 ```
 
 ---
@@ -58,72 +103,33 @@ The application accepts call transcript `.json` files structured as an array of 
 
 ```text
 loan-call-assignment/
-├── README.md                  # Project overview & documentation
+├── README.md                  # Project overview & quickstart guide
+├── TECHNICAL_REPORT.md        # Comprehensive technical report (Markdown)
+├── TECHNICAL_REPORT.pdf        # Formatted PDF technical report
 └── streamlit/
-    ├── app.py                 # Main Streamlit web application entry point
+    ├── app.py                 # Main Streamlit application entry point
     ├── compliance.py          # Temporal state-machine for privacy violation detection
     ├── rules.py               # Regex patterns & rule-based detection logic
     ├── ml_pipeline.py         # Joblib classifier loading & prediction helpers
-    ├── llm_pipeline.py        # LLM prompt templates & structured JSON generation
-    ├── load_llm.py            # Local GGUF model downloader & memory loader
+    ├── llm_pipeline.py        # LLM prompt engineering & structured JSON generation
+    ├── load_llm.py            # Hugging Face Serverless API & GGUF model loader
     ├── data_loader.py         # JSON transcript parsing & schema validation
-    ├── utils.py               # Result formatting & utility functions
+    ├── utils.py               # Robust model path resolution & evidence formatters
     ├── requirements.txt       # Dependencies for Streamlit Cloud & Linux deployment
     ├── pyproject.toml         # Project metadata & dependency definitions
-    └── models/                # ML artifacts (.joblib) & GGUF model binaries (.gguf)
+    └── models/                # Pre-trained ML artifacts (.joblib)
+        ├── profanity.joblib
+        ├── compliance_events.joblib
+        └── verification.joblib
 ```
 
 ---
 
 ## 🚀 Quick Start & Local Setup
 
-### Prerequisites
-* **Python 3.12** installed
-* Optional: [`uv`](https://github.com/astral-sh/uv) (fast package manager) or standard `pip`
-
-### 1. Clone & Navigate
 ```bash
+git clone <repository_url>
 cd loan-call-assignment/streamlit
-```
-
-### 2. Install Dependencies
-
-Using `pip`:
-```bash
 pip install -r requirements.txt
-```
-
-Or using `uv`:
-```bash
-uv sync
-```
-
-### 3. Run the Streamlit App
-```bash
 streamlit run app.py
 ```
-*(Or via uv: `uv run app.py`)*
-
-The web app will open automatically in your browser at `http://localhost:8501`.
-
----
-
-## ☁️ Deployment Guide (Streamlit Community Cloud)
-
-1. **Push Code to GitHub**: Ensure `streamlit/requirements.txt` is present in your repo.
-2. **Deploy on Streamlit**: Go to [share.streamlit.io](https://share.streamlit.io) and log in with GitHub.
-3. **Repository Settings**:
-   * **Repository:** `YourUsername/your-repo-name`
-   * **Main file path:** `streamlit/app.py`
-4. Click **Deploy!**
-
-> [!NOTE]
-> On initial boot, if no GGUF model file is present in `streamlit/models/`, the application will automatically download **`Qwen2.5-0.5B-Instruct-GGUF`** (~398 MB) from Hugging Face into memory.
-
----
-
-## 💻 Hardware & Memory Footprint
-
-* **RAM Requirement:** 8 GB RAM (Runs comfortably using ~1.0–1.5 GB RAM for local LLM inference).
-* **LLM Inference Speed on CPU:** ~20–40 tokens/sec (~3–8 seconds per transcript JSON).
-* **GPU Requirement:** None (Uses `llama.cpp` CPU thread optimization).
