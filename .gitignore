@@ -224,5 +224,4 @@ models/*.gguf
 # Lock files (avoid platform-specific wheel lock conflicts)
 uv.lock
 
-*.toml
-.python-version
+
