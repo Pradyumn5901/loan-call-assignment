@@ -98,11 +98,22 @@ def _format_transcript(conversation: list[dict[str, Any]]) -> str:
 
 
 def _extract_json(raw: str) -> dict[str, Any]:
-    """Extract and parse the first JSON object from LLM response text."""
-    match = re.search(r"\{.*\}", raw, re.DOTALL)
-    if not match:
-        raise ValueError(f"No JSON found in LLM response:\n{raw}")
-    return json.loads(match.group())
+    """Extract and parse the first valid JSON object from LLM response text."""
+    cleaned = re.sub(r"^```(?:json)?\s*", "", raw.strip(), flags=re.MULTILINE)
+    cleaned = re.sub(r"```$", "", cleaned.strip(), flags=re.MULTILINE)
+
+    match = re.search(r"\{[\s\S]*?\}", cleaned)
+    if match:
+        try:
+            return json.loads(match.group())
+        except json.JSONDecodeError:
+            pass
+
+    match_greedy = re.search(r"\{.*\}", raw, re.DOTALL)
+    if match_greedy:
+        return json.loads(match_greedy.group())
+
+    raise ValueError(f"No valid JSON found in LLM response:\n{raw}")
 
 
 # ── Public API ─────────────────────────────────────────────────────────────────

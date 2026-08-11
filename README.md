@@ -118,7 +118,7 @@ The web app will open automatically in your browser at `http://localhost:8501`.
 4. Click **Deploy!**
 
 > [!NOTE]
-> On initial boot, if no GGUF model file is present in `streamlit/models/`, the application will automatically download **`Qwen2.5-1.5B-Instruct-GGUF`** from Hugging Face into memory.
+> On initial boot, if no GGUF model file is present in `streamlit/models/`, the application will automatically download **`Qwen2.5-0.5B-Instruct-GGUF`** (~398 MB) from Hugging Face into memory.
 
 ---
 

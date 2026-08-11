@@ -37,23 +37,24 @@ def _get_default_model_path() -> str:
         if gguf_files:
             return str(gguf_files[0])
 
-    # Auto-download Qwen2.5 GGUF model from Hugging Face if not present
+    # Auto-download Qwen2.5-0.5B GGUF model (~398MB) from Hugging Face if not present
+    # Using 0.5B model guarantees fitting inside Streamlit Cloud's 1GB RAM limit
     try:
         from huggingface_hub import hf_hub_download
-        print("  [LLM] GGUF model missing locally — downloading Qwen2.5 from Hugging Face...")
+        print("  [LLM] GGUF model missing locally — downloading Qwen2.5-0.5B from Hugging Face...")
         downloaded = hf_hub_download(
-            repo_id="Qwen/Qwen2.5-1.5B-Instruct-GGUF",
-            filename="qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            repo_id="Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+            filename="qwen2.5-0.5b-instruct-q4_k_m.gguf",
             local_dir=str(models_dir),
         )
         return downloaded
     except Exception:
-        return str(models_dir / "qwen2.5-1.5b-instruct-q4_k_m.gguf")
+        return str(models_dir / "qwen2.5-0.5b-instruct-q4_k_m.gguf")
 
 
 DEFAULT_MODEL_PATH: str = os.environ.get("LLM_MODEL_PATH", "")
 
-DEFAULT_N_CTX: int = int(os.environ.get("LLM_N_CTX", "2048"))
+DEFAULT_N_CTX: int = int(os.environ.get("LLM_N_CTX", "1024"))
 DEFAULT_MAX_TOKENS: int = int(os.environ.get("LLM_MAX_TOKENS", "512"))
 DEFAULT_N_THREADS: int | None = (
     int(os.environ["LLM_N_THREADS"]) if "LLM_N_THREADS" in os.environ else None
