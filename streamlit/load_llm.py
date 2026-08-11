@@ -2,9 +2,8 @@
 
 Switched to Hugging Face Serverless Inference API for cloud stability,
 zero local RAM consumption, and fast response times.
-
-(All local llama-cpp-python GGUF code is commented out below for reference).
 """
+
 
 from __future__ import annotations
 

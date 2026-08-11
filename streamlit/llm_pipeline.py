@@ -1,10 +1,9 @@
 """LLM inference pipeline using Hugging Face Serverless Inference API.
 
-Uses Hugging Face's hosted high-speed cloud inference (e.g. Qwen2.5-72B-Instruct)
+Uses Hugging Face's hosted high-speed cloud inference (e.g. Qwen2.5-7B-Instruct)
 for zero local memory consumption, fast response times (~1-2s), and high accuracy.
-
-(All local llama-cpp-python code is commented out below).
 """
+
 
 from __future__ import annotations
 
