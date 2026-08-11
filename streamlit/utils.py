@@ -17,10 +17,18 @@ def model_path(task: str) -> str:
     return os.path.join(_ML_MODEL_DIR, f"{name}.joblib")
 
 
-def format_evidence(evidence: list[dict[str, Any]]) -> str:
+def format_evidence(evidence: list[Any]) -> str:
     if not evidence:
         return "No supporting snippet found."
-    return "\n".join(
-        f"[{item.get('stime', 0):.1f}s] {item.get('speaker', '')}: {item.get('text', '')}"
-        for item in evidence
-    )
+    formatted = []
+    for item in evidence:
+        if isinstance(item, dict):
+            stime = item.get("stime", 0.0)
+            speaker = item.get("speaker", "")
+            text = item.get("text", "")
+            prefix = f"[{stime:.1f}s] " if stime else ""
+            prefix += f"{speaker}: " if speaker else ""
+            formatted.append(f"{prefix}{text}")
+        elif isinstance(item, str):
+            formatted.append(item)
+    return "\n".join(formatted) if formatted else "No supporting snippet found."

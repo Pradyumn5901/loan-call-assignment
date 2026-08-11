@@ -50,13 +50,27 @@ def main():
                         "evidence": evidence,
                     }
                 else:
-                    evidence = [p for p in preds if p["label"]]
+                    rule_comp = detect_compliance(conversation)
+                    v_idx = rule_comp.get("verification_index")
+                    
+                    # ML predicts disclosure events
+                    ml_disclosures = [p for p in preds if p["label"]]
+                    
+                    # A disclosure is ONLY a violation if it occurred BEFORE verification (or if verification never occurred)
+                    violation_evidence = [
+                        p for p in ml_disclosures
+                        if v_idx is None or p["utterance_index"] < v_idx
+                    ]
+                    is_viol = len(violation_evidence) > 0
                     result = {
-                        "present": bool(evidence),
-                        "violation": bool(evidence),
-                        "evidence": evidence,
-                        "confidence": max((p["confidence"] for p in evidence), default=0.0),
+                        "present": is_viol,
+                        "violation": is_viol,
+                        "verification_index": v_idx,
+                        "verification_time": rule_comp.get("verification_time"),
+                        "evidence": violation_evidence if is_viol else [],
+                        "confidence": max((p["confidence"] for p in violation_evidence), default=0.0),
                     }
+
             elif approach == "LLM":
                 from llm_pipeline import classify_with_llm
 

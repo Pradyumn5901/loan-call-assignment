@@ -21,11 +21,14 @@ def _looks_like_verification_answer(text: str) -> bool:
 def detect_compliance(conversation: list[dict[str, Any]]) -> dict[str, Any]:
     state = "UNVERIFIED"
     verification_index = None
+    verification_time = None
     disclosure_events = []
     violation_events = []
 
     for index, utterance in enumerate(conversation):
         text = utterance["text"]
+        stime = float(utterance.get("stime", 0.0))
+
         if utterance["speaker"] == "Agent" and is_verification_event(text):
             state = "VERIFICATION_REQUESTED"
 
@@ -36,6 +39,7 @@ def detect_compliance(conversation: list[dict[str, Any]]) -> dict[str, Any]:
         ):
             state = "VERIFIED"
             verification_index = index
+            verification_time = stime
 
         if is_sensitive_disclosure(text, utterance["speaker"]):
             event = {
@@ -50,10 +54,13 @@ def detect_compliance(conversation: list[dict[str, Any]]) -> dict[str, Any]:
             if state != "VERIFIED":
                 violation_events.append(event)
 
+    is_violation = len(violation_events) > 0
     return {
-        "present": bool(violation_events),
-        "violation": bool(violation_events),
+        "present": is_violation,
+        "violation": is_violation,
         "verification_index": verification_index,
+        "verification_time": verification_time,
         "disclosures": disclosure_events,
-        "evidence": violation_events,
+        "evidence": violation_events if is_violation else [],
     }
+

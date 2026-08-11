@@ -1,2 +1,1 @@
-cmake
-build-essential
+# No C++ system packages required
